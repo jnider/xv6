@@ -1,3 +1,5 @@
+#include "types.h"
+
 struct buf;
 struct context;
 struct file;
@@ -91,6 +93,9 @@ extern int      ismp;
 int             mpbcpu(void);
 void            mpinit(void);
 void            mpstartthem(void);
+
+// cpuid.c
+void            cpuidinit(void);
 
 // picirq.c
 void            picenable(int);

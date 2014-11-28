@@ -1,3 +1,6 @@
+#include "types.h"
+#include "fs.h"
+
 struct file {
   enum { FD_NONE, FD_PIPE, FD_INODE } type;
   int ref; // reference count
@@ -35,7 +38,9 @@ struct devsw {
 
 extern struct devsw devsw[];
 
+// major device numbers
 #define CONSOLE 1
+#define CPUID   2
 
 //PAGEBREAK!
 // Blank page.
